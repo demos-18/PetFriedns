@@ -16,6 +16,7 @@ class TestPositivePetFriends:
         """В этом тесте проверяем возможность получения api-ключа c корректными данными."""
         res = pf.get_api_key(email, password)
         response = ResponseHandler(res)
+
         response.assert_status_code(200).validate_pydantic(Key)
 
     @pytest.mark.parametrize("fillter", PositiveFilter.list())
