@@ -74,7 +74,7 @@ class TestPositivePetFriends:
         assert response.parsed_obj("age") == str(age)
 
     def test_add_photo_of_pet(self, get_api_key, pet_photo, get_pet_id):
-        """В этом тесте проверяем возможноть добавлении фотографии, к уже созданному питомцу с корректными данными."""
+        """В этом тесте проверяем возможноть добавлении фотографии к созданному питомцу с корректными данными."""
         res = pf.add_photo_of_pet(get_api_key, get_pet_id, pet_photo)
         response = ResponseHandler(res)
 
